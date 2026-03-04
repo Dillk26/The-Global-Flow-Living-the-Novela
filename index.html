@@ -320,7 +320,8 @@
             
             <h3 class="title-font text-2xl sm:text-3xl mb-3 text-dark-brown">The Telephone!</h3>
             <p id="telephone-text" class="text-base sm:text-lg text-gray-800 mb-6 sm:mb-8 font-medium leading-relaxed">
-                Your Aunt calls from Monterrey! She wants you to translate an English Hollywood movie title. If you do, she'll give you a massive spoiler for tomorrow's novela!
+                Your Aunt calls from Monterrey! She wants you to translate an English Hollywood movie title. If you do, she'll give you a massive spoiler for tomorrow's novela! 
+                <br><br><span class="text-sm italic text-pink-700">Enter the Telenovela Flow?</span>
             </p>
             <div class="space-y-3 sm:space-y-4">
                 <button onclick="handleTelephone(true)" class="btn-aztec w-full p-3 sm:p-4 font-bold text-sm sm:text-base text-dark-brown bg-gold">
@@ -389,21 +390,12 @@
                     ]
                 },
                 {
-                    title: "The Telenovela Escape",
-                    desc: "It's 7 PM. You're exhausted from school and work. You lock yourself in your room to watch the novela. Your boyfriend calls and your brothers bang on the door demanding dinner.",
-                    icon: "fa-door-closed",
+                    title: "Multiple Identities",
+                    desc: "Relatives from Monterrey mock your Americanized Spanish. Your cousin Ana defends you: 'Hispanic is official, and Mexico is where I'm from.' Sara adds, 'We're all American. We're just from Mexico.'",
+                    icon: "fa-id-card",
                     choices: [
-                        { text: "Ignore them and yell at the TV. This is your one hour of private, feminine escape.", flow: 30, culture: -15 },
-                        { text: "Pause the TV to make them dinner. Domestic duties come first in 'real life'.", flow: -20, culture: 20 }
-                    ]
-                },
-                {
-                    title: "The 'Proper' Spanish",
-                    desc: "You're chatting with your cousins in Monterrey. They mock your Americanized 'pocho' Spanish dialect, pointing out that characters on Televisa sound much more sophisticated.",
-                    icon: "fa-comments",
-                    choices: [
-                        { text: "Feel embarrassed. Try to mimic the polished Spanish of the novela actors.", flow: 20, culture: 15 },
-                        { text: "Laugh it off. You speak the language of your community in San Antonio.", flow: -25, culture: -10 }
+                        { text: "Embrace your hybrid identity. You are American, but you won't let them erase your roots.", flow: -15, culture: 25 },
+                        { text: "Feel embarrassed. Try to mimic the polished Spanish of the Televisa actors to prove you belong.", flow: 20, culture: -15 }
                     ]
                 },
                 {
@@ -412,15 +404,24 @@
                     icon: "fa-briefcase",
                     choices: [
                         { text: "Take the job anyway. As your dad says, 'If being Mexican helped this time, take it.'", flow: 15, culture: -15 },
-                        { text: "Doubt yourself and reject it. You only want to be accepted if you 'earned' it purely on merit.", flow: -15, culture: 25 }
+                        { text: "Doubt yourself. You only want to be accepted if you 'earned' it purely on merit.", flow: -15, culture: 25 }
+                    ]
+                },
+                {
+                    title: "Clashing Identities",
+                    desc: "You're watching a novela where the wealthy family is openly racist against the indigenous protagonist. Your cousin remarks, 'Our parents are racist just like Gloria [the villain],' remembering how they threatened to disown her if she dated outside her race.",
+                    icon: "fa-users-slash",
+                    choices: [
+                        { text: "Agree with her. We live in a multi-racial society and need to leave outdated Mexican racial views behind.", flow: -10, culture: 20 },
+                        { text: "Defend your parents. It's just their generation, we shouldn't judge them by American TV standards.", flow: 15, culture: -15 }
                     ]
                 },
                 {
                     title: "The 'Authentic' Indian",
-                    desc: "You and your cousins are watching 'Maria Isabel'. The indigenous protagonist is praised as 'authentic', but you notice she is actually a tall, fair-skinned actress with a perfect midriff.",
+                    desc: "You and your cousins watch 'Maria Isabel'. The indigenous protagonist is praised as 'authentic', but you notice she is actually a tall, fair-skinned actress. You realize you are 'fatter' and not as 'pretty' as her.",
                     icon: "fa-star",
                     choices: [
-                        { text: "Internalize the beauty standard. Lament that you are 'fatter' and not as pretty as the actress.", flow: 30, culture: -10 },
+                        { text: "Internalize the beauty standard. Lament that your body doesn't fit the required image for social mobility.", flow: 30, culture: -10 },
                         { text: "Critique the casting. Point out that real indigenous people you see on the border don't look like that.", flow: -20, culture: 15 }
                     ]
                 }
@@ -439,17 +440,17 @@
                     ]
                 },
                 {
-                    title: "The Diet Advertisement",
-                    desc: "Your favorite actor, Tony Ramos, went to a spa to lose weight for his new novela role. Now he's starring in commercials for a new, beautifully presented diet food.",
-                    icon: "fa-utensils",
+                    title: "The Porcina Style",
+                    desc: "The character Porcina from 'Roque Santeiro' has launched a massive trend. The 'Porcina Style' of pink ribbons and plastic necklaces is everywhere. People are even naming a local cold virus after her!",
+                    icon: "fa-ribbon",
                     choices: [
-                        { text: "Buy the diet food. If it worked for the actor, it will work for you.", flow: 25, culture: 10 },
-                        { text: "Acknowledge it's just a marketing scheme blending the actor and the character.", flow: -15, culture: 10 }
+                        { text: "Buy the pink ribbons and necklaces to be part of the cultural phenomenon.", flow: 30, culture: 15 },
+                        { text: "Refuse to wear the 'bad-taste' accessories, even if you catch the 'Porcina' cold.", flow: -20, culture: -10 }
                     ]
                 },
                 {
                     title: "The Plastic Surgery Standard",
-                    desc: "Media beauty standards are rising. Your cousin's husband gave her a facelift as an anniversary present. Now she is considering selling her car to pay for a liposuction.",
+                    desc: "Media beauty standards are rising. Your cousin Marlene's husband gave her a facelift as an anniversary present. Now she is considering selling her car to pay for liposuction.",
                     icon: "fa-syringe",
                     choices: [
                         { text: "Support her. In this society, investing in physical beauty yields social power.", flow: 20, culture: 15 },
@@ -458,20 +459,20 @@
                 },
                 {
                     title: "The National Pause",
-                    desc: "The finale of 'A Próxima Vítima' is airing. The suspense is unbearable. It's delaying the real-life Carnival parade by an hour because everyone is glued to their screens.",
+                    desc: "It is 1990 and the finale of 'Tieta' is airing. The suspense is unbearable. It's actually delaying the real-life Rio Carnival parade by an hour because everyone is glued to their screens.",
                     icon: "fa-mask",
                     choices: [
-                        { text: "Stay inside and place bets on who the murderer is. Carnival can wait.", flow: 35, culture: 5 },
+                        { text: "Stay inside and wait for the finale. Carnival can wait.", flow: 35, culture: 5 },
                         { text: "Go to the empty streets. The 'real life' culture is outside.", flow: -25, culture: 20 }
                     ]
                 },
                 {
-                    title: "Gossip as Reality",
-                    desc: "At the salon, your manicurist is gossiping furiously about a woman's betrayal. It takes you five minutes to realize she's talking about 'Dona Imaculada' from the 7 o'clock novela, not a real person.",
-                    icon: "fa-cut",
+                    title: "The Diet Advertisement",
+                    desc: "Your favorite actor, Tony Ramos, went to a spa to lose weight for his new novela role. Now he's starring in commercials for a new, beautifully presented diet food.",
+                    icon: "fa-utensils",
                     choices: [
-                        { text: "Join the gossip! Talk about the characters as if they are your neighbors.", flow: 25, culture: 15 },
-                        { text: "Change the subject to real-life neighborhood news.", flow: -15, culture: 5 }
+                        { text: "Buy the diet food. If it worked for the actor, it will work for you.", flow: 25, culture: 10 },
+                        { text: "Acknowledge it's just a marketing scheme blending the actor and the character.", flow: -15, culture: 10 }
                     ]
                 }
             ]
@@ -481,11 +482,11 @@
             scenarios: [
                 {
                     title: "The Paternalistic Boss",
-                    desc: "You work as a domestic servant for a wealthy urban engineer. He falls in love with you, but affectionately tells his elite friends that you will 'always be his Indian.'",
+                    desc: "Your wealthy boss, Ricardo, falls in love with you, but affectionately tells his elite friends that you will 'always be his Indian.' You feel like he doesn't truly respect you.",
                     icon: "fa-user-tie",
                     choices: [
                         { text: "Accept it. He is a good man and marriage will secure your class mobility.", flow: 25, culture: 10 },
-                        { text: "Reject the label. It makes you feel inferior, even if it risks the romance.", flow: -20, culture: -25 }
+                        { text: "Break up with him. If he doesn't respect your heritage, it's not true love.", flow: -20, culture: -25 }
                     ]
                 },
                 {
@@ -508,7 +509,7 @@
                 },
                 {
                     title: "The Racist Relatives",
-                    desc: "Your new husband's Aunt and Daughter openly despise you because of your dark skin and rural background. They try to sabotage your standing in the household.",
+                    desc: "Your new husband's Aunt and Daughter, Gloria, openly despise you because of your dark skin and rural background. They try to sabotage your standing in the household.",
                     icon: "fa-angry",
                     choices: [
                         { text: "Kill them with kindness. Prove you have the 'moral superiority' of the poor.", flow: 20, culture: 15 },
@@ -711,13 +712,13 @@
 
         if (state.flow > 75 && state.culture > 50) {
             title = "The Telenovela Star";
-            message = "You lost yourself in the melodramatic excess, completely blurring fiction and reality! You assimilated perfectly into the consumer and social ideals dictated by the screen. You fit in beautifully, though you sometimes wonder how much of your life is a script written by Televisa.";
+            message = "You entered the 'Telenovela Flow' completely, blurring fiction, reality, and consumption! You assimilated perfectly into the consumer and social ideals dictated by the screen. You fit in beautifully, though you sometimes wonder how much of your life is a script written by Televisa.";
         } else if (state.flow < 40 && state.culture > 60) {
             title = "The Grounded Realist";
-            message = "You navigated the hybrid space masterfully, rejecting the unrealistic beauty and class standards of the media. You learned to translate yourself across social spheres on your own terms, proving that identity is fluid and doesn't have to be bought at the mall.";
+            message = "You navigated the hybrid space masterfully, rejecting the unrealistic beauty and class standards of the media. You learned to translate yourself across social spheres on your own terms, proving that identity is fluid and successfully destabilizing the traditional stereotypes.";
         } else if (state.flow > 60 && state.culture < 40) {
             title = "The Alienated Fan";
-            message = "You heavily bought into the media's promises—the fashion, the language, the ideal romance—but found that 'real life' didn't quite translate. You feel a bit isolated from your immediate surroundings, finding more comfort in the televised world than the real one.";
+            message = "You heavily bought into the media's promises—the fashion, the language, the ideal romance—but found that 'real life' didn't quite translate. You feel a bit isolated from your immediate surroundings, finding more comfort making connections to the televised world than the real one.";
         } else if (state.culture < 30) {
             title = "The Cultural Outsider";
             message = "You maintained a fierce sense of your original self, completely rejecting the mainstream flow. However, the lack of cultural translation left you isolated. <strong>That's just how it is.</strong> The realities of systemic class and ethnic tensions don't always yield a perfect, happy ending.";
